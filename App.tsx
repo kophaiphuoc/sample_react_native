@@ -15,22 +15,8 @@ import {post, get} from './src/utils/functionnetwork/Api';
 import ListItem from './src/components/datadisplay/ListItem';
 
 const App = () => {
-  const Test = ({item}) => {
-    console.log(item);
-    return (
-      <View>
-        <Text>xin chào</Text>
-      </View>
-    );
-  };
   return (
     <View>
-      <ListItem
-        data={[1, 2, 3]}
-        lengthListItem={5}
-        heightItem={10}
-        RenderItem={<Test/>}
-      />
       <Toast position="top" topOffset={10} />
     </View>
   );

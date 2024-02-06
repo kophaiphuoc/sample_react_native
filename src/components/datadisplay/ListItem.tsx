@@ -11,11 +11,10 @@ import {COLORS} from '../../styles/constans/SheetColor';
 const {width, height} = Dimensions.get('window');
 
 interface ListItemProps {
-  lengthListItem: number;
   heightItem: number;
-  RenderItem: React.ReactNode;
-  ListHeaderComponent?: React.ReactNode;
-  ListFooterComponent?: React.ReactNode;
+  RenderItem: React.ReactElement;
+  ListHeaderComponent?: React.ReactElement;
+  ListFooterComponent?: React.ReactElement;
   data: any[];
   scrollEnabled?: boolean;
   initRender?: number;
@@ -25,7 +24,6 @@ interface ListItemProps {
 }
 
 const ListItem: React.FC<ListItemProps> = ({
-  lengthListItem,
   heightItem,
   RenderItem,
   ListHeaderComponent,
@@ -47,7 +45,7 @@ const ListItem: React.FC<ListItemProps> = ({
         <FlashList
           data={data}
           extraData={data}
-          renderItem={()=>RenderItem}
+          renderItem={({item}) => React.cloneElement(RenderItem, {item})}
           scrollEnabled={scrollEnabled}
           keyExtractor={(_, index) => index.toString()}
           contentInset={{bottom: 100}}

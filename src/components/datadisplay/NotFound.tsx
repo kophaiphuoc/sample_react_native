@@ -13,8 +13,8 @@ import globalStyles from '../../styles/GlobalStyle';
 const {width, height} = Dimensions.get('screen');
 
 interface NotFoundProps {
-  type: 'animation' | 'image';
-  refresh: Function;
+  type?: 'animation' | 'image';
+  refresh?: Function;
 }
 
 const NotFound: React.FC<NotFoundProps> = ({
