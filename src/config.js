@@ -1,1 +1,1 @@
-export const BASE_URL_DOMAIN = 'https://jsonplaceholder.typicode.com/';
+export const BASE_URL_DOMAIN = 'https://nh-wms.nandh.vn/v1/';
