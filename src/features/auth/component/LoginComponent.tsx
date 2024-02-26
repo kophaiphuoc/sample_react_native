@@ -10,17 +10,20 @@ type Props = {};
 
 const LoginComponent = (props: Props) => {
   const dispatch = useDispatch();
+  const loginData = useSelector(state => state.login);
 
   const data = {
-    email: 'sang2000@gmail.com',
-    password: '123',
+    email: 'phuocph1903@gmail.com',
+    password: 'phuocph1903@gmail.com',
     warehouse_id: 1,
   };
   const login = async () => {
-    await dispatch(loginAuth(data));
+    const res = await dispatch(loginAuth(data));
+    console.log(res);
   };
   return (
     <View>
+      <Text>{JSON.stringify(loginData)}</Text>
       <BaseButton titleButton="Login" onPressButton={login} />
     </View>
   );

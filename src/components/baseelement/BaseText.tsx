@@ -1,5 +1,7 @@
 import {StyleSheet, Text, ViewStyle} from 'react-native';
 import React from 'react';
+import {scale} from 'react-native-size-matters';
+
 import {COLORS} from '../../styles/constans/SheetColor';
 
 interface BaseButtonProps {
@@ -15,7 +17,7 @@ export default BaseText;
 
 const styles = StyleSheet.create({
   baseCss: {
-    fontSize: 13,
+    fontSize: scale(13),
     fontWeight: '400',
     color: COLORS.black,
   },
