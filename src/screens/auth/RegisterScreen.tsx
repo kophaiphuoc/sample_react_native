@@ -40,7 +40,7 @@ const RegisterScreen = (props: Props) => {
   return (
     <View>
       <Text>Hello world!</Text>
-      <View style={{height: 100, backgroundColor: 'red'}}>
+      <View style={{height: 100, BACKGROUNDColor: 'red'}}>
         <SheetAcction />
       </View>
     </View>

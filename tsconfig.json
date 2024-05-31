@@ -1,3 +1,30 @@
 {
-  "extends": "@react-native/typescript-config/tsconfig.json"
+  "extends": "@react-native/typescript-config/tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@baseelement/*": ["src/components/baseelement/*"],
+      "@datadisplay/*": ["src/components/datadisplay/*"],
+      "@features/*": ["src/components/features/*"],
+      "@feedback/*": ["src/components/feedback/*"],
+      "@general/*": ["src/components/general/*"],
+      "@layout/*": ["src/components/layout/*"],
+      "@navigation/*": ["src/components/navigation/*"],
+      //
+      "@auth/*": ["src/features/auth/*"],
+      "@file/*": ["src/features/file/*"],
+      "@scan/*": ["src/features/scan/*"],
+      //
+      "@stacks/*": ["src/navigation/stacks/*"],
+      "@allStack/*": ["src/navigation/AllStackNavigation*"],
+      //
+      "@screens/*": ["src/screens/*"],
+      //
+      "@funcfeature/*": ["src/utils/funcfeature/*"],
+      "@functionnetwork/*": ["src/utils/functionnetwork/*"],
+      "@functionsystem/*": ["src/utils/functionsystem/*"],
+      //
+      // "@image/*": ["src/common/constans/*"],
+    }
+  }
 }

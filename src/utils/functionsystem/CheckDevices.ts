@@ -1,15 +1,20 @@
-import {Platform} from 'react-native';
+import {Platform, Dimensions} from 'react-native';
+
+const {width, height} = Dimensions.get('screen');
+
+export const WIDTH_SCREEN = width;
+export const HEIGHT_SCREEN = height;
 
 export const checkOS = () => {
   if (Platform.OS === 'ios') {
-    return true;
-  } else if (Platform.OS === 'android') {
     return false;
+  } else if (Platform.OS === 'android') {
+    return true;
   } else if (Platform.OS === 'windows') {
-    console.log('Windows');
+    return true;
   } else if (Platform.OS === 'web') {
-    console.log('Web');
+    return true;
   } else {
-    console.log('Unknown OS');
+    return true;
   }
 };

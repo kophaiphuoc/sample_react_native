@@ -36,6 +36,7 @@ target 'nh_ticket' do
     end
   end
   config = use_native_modules!
+  
 
   use_react_native!(
     :path => config[:reactNativePath],
@@ -61,4 +62,5 @@ target 'nh_ticket' do
       :mac_catalyst_enabled => false
     )
   end
+
 end

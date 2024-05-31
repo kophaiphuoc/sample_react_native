@@ -6,7 +6,7 @@ import {
   ANIM_DEFAULT_SCREEN,
   IMG_DEFAULT_SCREEN,
 } from '../../common/constans/ListImage';
-import {COLORS} from '../../styles/constans/SheetColor';
+import {COLORS} from '../../styles/SheetColor';
 import BaseButton from '../baseelement/BaseButton';
 import globalStyles from '../../styles/GlobalStyle';
 
@@ -28,7 +28,7 @@ const NotFound: React.FC<NotFoundProps> = ({
           style={[
             styles.containerLoti,
             globalStyles.centerItem,
-            styles.backgroundColor,
+            styles.BACKGROUNDColor,
           ]}>
           <View style={globalStyles.flexTwo}>
             <LottieView
@@ -51,7 +51,7 @@ const NotFound: React.FC<NotFoundProps> = ({
           style={[
             styles.containerLoti,
             globalStyles.centerItem,
-            styles.backgroundColor,
+            styles.BACKGROUNDColor,
           ]}>
           <View style={globalStyles.flexTwo}>
             <Image
@@ -78,8 +78,8 @@ const styles = StyleSheet.create({
   vButtonReFresh: {
     width: width / 2,
   },
-  backgroundColor: {
-    backgroundColor: COLORS.white,
+  BACKGROUNDColor: {
+    BACKGROUNDColor: COLORS.WHITE,
   },
   containerLoti: {
     height: height,
@@ -88,6 +88,6 @@ const styles = StyleSheet.create({
     objectFit: 'contain',
     width: width,
     height: '100%',
-    backgroundColor: COLORS.white,
+    BACKGROUNDColor: COLORS.WHITE,
   },
 });

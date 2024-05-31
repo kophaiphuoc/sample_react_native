@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import {COLORS} from './constans/SheetColor';
+import {COLORS} from './SheetColor';
 
 const NUMBER_PADDING = 10;
 const NUMBER_MARGIN = 10;
@@ -15,7 +15,7 @@ const SPACING_ITEM = {
 };
 
 const BASE_TEXT_COLOR = {
-  color: COLORS.black,
+  color: COLORS.BLACK,
   fontWeight: '400',
 };
 const BASE_TEXT_FONT = {
@@ -47,7 +47,7 @@ const globalStyles = StyleSheet.create({
   container: {
     ...CENTER_ITEM,
     flex: 1,
-    backgroundColor: COLORS.white,
+    BACKGROUNDColor: COLORS.WHITE,
   },
   centerItem: {
     ...CENTER_ITEM,

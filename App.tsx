@@ -7,7 +7,7 @@ import {
   View,
   Text,
 } from 'react-native';
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState, useContext} from 'react';
 
 import {Provider} from 'react-redux';
 import store, {persistor} from './src/stores/Store';
@@ -15,7 +15,6 @@ import {NavigationContainer} from '@react-navigation/native';
 import {MenuProvider} from 'react-native-popup-menu';
 import {ActionSheetProvider} from '@expo/react-native-action-sheet';
 import {PersistGate} from 'redux-persist/integration/react';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import FlexView from './src/components/layout/display/FlexView';
 import SpaceView from './src/components/layout/display/SpaceView';
@@ -31,6 +30,7 @@ import {post, get} from './src/utils/functionnetwork/Api';
 import ListItem from './src/components/datadisplay/ListItem';
 import LoginComponent from './src/features/auth/component/LoginComponent';
 import AllNavigation from './src/navigation/AllStackNavigation';
+import {ThemeContext, ThemeProvider} from './src/themes/ThemeContext';
 
 const App: React.FC = () => {
   const colorSchemeDefault = useColorScheme();
@@ -53,31 +53,26 @@ const App: React.FC = () => {
   }, [colorSchemeDefault]);
 
   persistor.subscribe(() => {
-    const state = store.getState(); // Lấy trạng thái của Redux store
+    const state = store.getState();
     const loginData = state.login;
-    console.log('Lấy dữ liệu đã lưu trữ:', loginData);
   });
-
+  const {theme, toggleTheme} = React.useContext(ThemeContext);
+  toggleTheme();
   return (
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
-        <ActionSheetProvider>
-          <MenuProvider>
-            <SafeAreaView style={{flex: 1}}>
-              <StatusBar
-                animated={true}
-                barStyle={
-                  currentTheme === 'light' ? 'light-content' : 'dark-content'
-                }
-                hidden={false}
-              />
-              <NavigationContainer>
-                <AllNavigation />
-              </NavigationContainer>
-              <Toast position="top" topOffset={10} />
-            </SafeAreaView>
-          </MenuProvider>
-        </ActionSheetProvider>
+        <ThemeProvider>
+          <ActionSheetProvider>
+            <MenuProvider>
+              <SafeAreaView style={{flex: 1}}>
+                <NavigationContainer>
+                  <AllNavigation />
+                </NavigationContainer>
+                <Toast position="top" topOffset={10} />
+              </SafeAreaView>
+            </MenuProvider>
+          </ActionSheetProvider>
+        </ThemeProvider>
       </PersistGate>
     </Provider>
   );

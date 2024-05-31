@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import {COLORS} from '../constans/SheetColor';
+import {COLORS} from '../SheetColor';
 import globalStyles from '../GlobalStyle';
 
 // size base style
@@ -24,26 +24,26 @@ const BASE_SIZE_LARGE = {
 
 const BASE_TEXT_SMALL = {
   fontSize: 12,
-  color: COLORS.white,
+  color: COLORS.WHITE,
 };
 const BASE_TEXT_MEDIUM = {
   fontSize: 13,
-  color: COLORS.white,
+  color: COLORS.WHITE,
 };
 const BASE_TEXT_LARGE = {
   fontSize: 14,
-  color: COLORS.white,
+  color: COLORS.WHITE,
 };
 
 const CSS_CORE_OUTLINE = {
   borderWidth: 1,
-  borderColor: COLORS.silver_gray,
+  borderColor: COLORS.silver_GRAY,
   borderRadius: 5,
 };
 
 const CSS_CORE_LINEAR = {
   borderRadius: 5,
-  backgroundColor: COLORS.primary,
+  BACKGROUNDColor: COLORS.PRIMARY,
 };
 
 export const outLineButton = StyleSheet.create({

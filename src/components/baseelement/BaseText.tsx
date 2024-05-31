@@ -2,7 +2,7 @@ import {StyleSheet, Text, ViewStyle} from 'react-native';
 import React from 'react';
 import {scale} from 'react-native-size-matters';
 
-import {COLORS} from '../../styles/constans/SheetColor';
+import {COLORS} from '../../styles/SheetColor';
 
 interface BaseButtonProps {
   style?: ViewStyle | {color: string; fontSize: number};
@@ -19,6 +19,6 @@ const styles = StyleSheet.create({
   baseCss: {
     fontSize: scale(13),
     fontWeight: '400',
-    color: COLORS.black,
+    color: COLORS.BLACK,
   },
 });

@@ -1,27 +1,23 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import {useNavigation} from '@react-navigation/native';
-
-import BaseButton from '../../components/baseelement/BaseButton';
-import LoginComponent from '../../features/auth/component/LoginComponent';
+import DarkModeScreen from '../../components/animation/darkmode/DarkModeScreen';
 
 type Props = {};
 
 const LoginScreen = (props: Props) => {
-  const navigation = useNavigation();
-
-  const nextScreen = () => {
-    navigation.navigate('RegisterScreen');
-  };
-
   return (
-    <View>
-      {/* <BaseButton titleButton="next register" onPressButton={nextScreen} /> */}
-      <LoginComponent />
+    <View style={styles.container}>
+      <DarkModeScreen />
     </View>
   );
 };
 
 export default LoginScreen;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    justifyContent: 'center',
+  },
+});

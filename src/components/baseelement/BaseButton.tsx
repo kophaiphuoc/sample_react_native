@@ -5,7 +5,7 @@ import {
   outLineButton,
   linearButton,
 } from '../../styles/components/ButtonInputStyle';
-import {COLORS} from '../../styles/constans/SheetColor';
+import {COLORS} from '../../styles/SheetColor';
 
 interface BaseButtonProps {
   typeButton?: string;
@@ -45,7 +45,7 @@ const BaseButton: React.FC<BaseButtonProps> = ({
   const titleStyle = (typeBtn: string) => {
     if (['small-linear', 'medium-linear', 'large-linear'].includes(typeBtn)) {
       return {
-        color: COLORS.white,
+        color: COLORS.WHITE,
         fontSize: 14,
       };
     }

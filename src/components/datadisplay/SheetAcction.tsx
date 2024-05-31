@@ -7,8 +7,13 @@ const SheetAcction = () => {
   const actionSheetRef = useRef<any>(null);
 
   const showActionSheet = () => {
-    const options = ['Option 1', 'Option 2', 'Option 3', 'Cancel'];
-    const cancelButtonIndex = options.length - 1;
+    const options: Array<string> = [
+      'Option 1',
+      'Option 2',
+      'Option 3',
+      'Cancel',
+    ];
+    const cancelButtonIndex: number = options.length - 1;
 
     actionSheetRef.current = showActionSheetWithOptions(
       {

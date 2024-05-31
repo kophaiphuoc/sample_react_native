@@ -1,10 +1,10 @@
 import React from 'react';
 import {View, ActivityIndicator, ViewStyle, StyleSheet} from 'react-native';
-import {COLORS} from '../../styles/constans/SheetColor';
+import {COLORS} from '../../styles/SheetColor';
 
 interface LoadingProps {
   enable?: boolean;
-  color?: boolean;
+  color?: string;
   style?: ViewStyle;
   size?: 'large' | 'small';
   sizeLoading?: number;
@@ -12,7 +12,7 @@ interface LoadingProps {
 
 const Loading: React.FC<LoadingProps> = ({
   enable = true,
-  color = COLORS.primary,
+  color = COLORS.PRIMARY,
   style,
   size = 'large',
   sizeLoading = 17,

@@ -6,7 +6,7 @@ import {FlashList} from '@shopify/flash-list';
 
 // import project
 import NotFound from './NotFound';
-import {COLORS} from '../../styles/constans/SheetColor';
+import {COLORS} from '../../styles/SheetColor';
 
 const {width, height} = Dimensions.get('window');
 
@@ -61,7 +61,7 @@ const ListItem: React.FC<ListItemProps> = ({
             <View
               style={{
                 height: height * 2,
-                backgroundColor: COLORS.white,
+                BACKGROUNDColor: COLORS.WHITE,
               }}>
               <NotFound refresh={onRefresh} type="animation" />
             </View>

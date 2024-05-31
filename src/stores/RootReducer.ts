@@ -8,7 +8,7 @@ const slicePersistConfig = {
   key: 'root',
   storage: AsyncStorage,
   version: 1,
-  whitelist: ['data'],
+  WHITElist: ['data'],
 };
 
 const rootReducer = combineReducers({
